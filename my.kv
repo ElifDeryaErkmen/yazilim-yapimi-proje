@@ -1,0 +1,393 @@
+WindowManager:
+    MainWindow:
+    SecondWindow:
+    ThirdWindow:
+    FourWindow:
+    FiveWindow:
+    SixWindow:
+    SWindow:
+    NWindow:
+
+<MainWindow>:
+    name: "main"
+
+    BoxLayout:
+        orientation: "vertical"
+        padding: [200,40,200,40]
+        Label:
+            text:"6 SİGMA SINAV SİSTEMİ GİRİŞİNE HOŞGELDİNİZ"
+            font_size: 32
+            color:"black"
+            bold: True
+            italic:True
+
+        BoxLayout
+            padding: [35,35,35,35]
+            Button:
+                text: "ADMİN GİRİŞ"
+                background_color:"red"
+                font_size:25
+                on_release:
+                    app.root.current = "third"
+                    root.manager.transition.direction = "left"
+
+        BoxLayout:
+            padding: [35,35,35,35]
+            Button:
+                text: "SINAV SORUMLUSU GİRİŞ"
+                background_color:"yellow"
+                font_size:25
+                on_release:
+                    app.root.current = "seven"
+                    root.manager.transition.direction = "left"
+
+        BoxLayout:
+            padding: [35,35,35,35]
+            Button:
+                text: "ÖĞRENCİ GİRİŞ"
+                background_color:"green"
+                font_size:25
+                on_release:
+                    app.root.current = "five"
+                    root.manager.transition.direction = "left"
+
+<SecondWindow>:
+    name: "second"
+
+    BoxLayout:
+        orientation: "vertical"
+        padding: [50,50,50,50]
+
+        BoxLayout
+            padding: [45,45,45,45]
+            Label:
+                text:'Adı:'
+                color:"black"
+                font_size:27
+
+            TextInput:
+                multiline: False
+        BoxLayout:
+            padding: [45,45,45,45]
+            Label:
+                text:"Kullanıcı Adı:"
+                color:"black"
+                font_size:27
+            TextInput:
+
+        BoxLayout:
+            padding: [45,45,45,45]
+            Label:
+                text:"Parola:"
+                color:"black"
+                font_size:27
+            TextInput:
+                password: True
+
+        BoxLayout:
+            padding: [200,40,200,40]
+            Button:
+                text: "GERİ"
+
+                on_release:
+                    app.root.current = "third"
+                    root.manager.transition.direction = "right"
+            Button:
+                text:"KAYDET"
+                on_release:
+                    app.root.current = "third"
+                    root.manager.transition.direction = "left"
+
+<ThirdWindow>:
+    name: "third"
+
+    BoxLayout:
+        orientation: "vertical"
+        padding: [200,40,200,40]
+
+        BoxLayout
+            padding: [35,35,35,35]
+            Button:
+                text: "SORUMLU EKLE"
+                background_color:"red"
+                font_size:25
+                on_release:
+                    app.root.current = "second"
+                    root.manager.transition.direction = "left"
+
+        BoxLayout:
+            padding: [35,35,35,35]
+            Button:
+                text: "SORUMLU ÇIKAR"
+                background_color:"yellow"
+                font_size:25
+                on_release:
+                    app.root.current = "second"
+                    root.manager.transition.direction = "left"
+
+        BoxLayout:
+            padding: [35,35,35,35]
+            Button:
+                text: "SORUMLU GÜNCELLE"
+                background_color:"green"
+                font_size:25
+                on_release:
+                    app.root.current = "second"
+                    root.manager.transition.direction = "left"
+
+        BoxLayout:
+            padding: [35,35,35,35]
+            Button:
+                text: "GERİ"
+                background_color:"blue"
+                font_size:25
+                on_release:
+                    app.root.current = "main"
+                    root.manager.transition.direction = "left"
+
+<FourWindow>:
+    name: "four"
+
+    BoxLayout:
+        orientation: "vertical"
+        padding: [200,40,200,40]
+
+        BoxLayout
+            padding: [35,35,35,35]
+            Button:
+                text: "SORU EKLE"
+                background_color:"red"
+                font_size:25
+                on_release:
+                    app.root.current = "nine"
+                    root.manager.transition.direction = "left"
+
+        BoxLayout:
+            padding: [35,35,35,35]
+            Button:
+                text: "SORU ÇIKAR"
+                background_color:"yellow"
+                font_size:25
+                on_release:
+                    app.root.current = "nine"
+                    root.manager.transition.direction = "left"
+
+        BoxLayout:
+            padding: [35,35,35,35]
+            Button:
+                text: "SORU GÜNCELLE"
+                background_color:"green"
+                font_size:25
+                on_release:
+                    app.root.current = "nine"
+                    root.manager.transition.direction = "left"
+
+        BoxLayout:
+            padding: [35,35,35,35]
+            Button:
+                text:"ANASAYFA"
+                on_release:
+                    app.root.current = "main"
+                    root.manager.transition.direction = "right"
+            Button:
+                text: "GERİ"
+                background_color:"blue"
+                font_size:25
+                on_release:
+                    app.root.current = "main"
+                    root.manager.transition.direction = "left"
+
+<FiveWindow>:
+    name: "five"
+
+    BoxLayout:
+        orientation: "vertical"
+        padding: [50,50,50,50]
+
+        BoxLayout
+            padding: [45,45,45,45]
+            Label:
+                text:'Adı:'
+                color:"black"
+                font_size:27
+
+            TextInput:
+                multiline: False
+        BoxLayout:
+            padding: [45,45,45,45]
+            Label:
+                text:"Kullanıcı Adı:"
+                color:"black"
+                font_size:27
+            TextInput:
+
+        BoxLayout:
+            padding: [45,45,45,45]
+            Label:
+                text:"Parola:"
+                color:"black"
+                font_size:27
+            TextInput:
+                password: True
+
+        BoxLayout:
+            padding: [200,40,200,40]
+            Button:
+                text: "ANASAYFA"
+
+                on_release:
+                    app.root.current = "main"
+                    root.manager.transition.direction = "right"
+            Button:
+                text:"GİRİŞ"
+                on_release:
+                    app.root.current = "six"
+                    root.manager.transition.direction = "left"
+
+<SixWindow>:
+    name: "six"
+
+    BoxLayout:
+        orientation: "vertical"
+        padding: [200,40,200,40]
+        Label:
+            text:"6 SİGMA SINAV SİSTEMİNE HOŞGELDİN"
+            font_size: 32
+            color:"red"
+            bold: True
+            italic:True
+        Label:
+            text:"Merhaba Öğrenci :) Şimdi karşına 10 soru çıkacak BAŞARILAR..."
+            color:"black"
+            font_size: 25
+        BoxLayout
+            padding: [25,25,25,25]
+            Button:
+                text: "TESTE BAŞLA"
+                background_color:"red"
+                font_size:20
+                on_release:
+                    app.root.current = "seven"
+                    root.manager.transition.direction = "left"
+        BoxLayout:
+            padding: [25,25,25,25]
+            Button:
+                text: "DOĞRULARIM"
+                background_color:"yellow"
+                font_size:20
+                on_release:
+                    app.root.current = "four"
+                    root.manager.transition.direction = "left"
+        BoxLayout:
+            padding: [25,25,25,25]
+            Button:
+                text: "YANLIŞLARIM"
+                background_color:"green"
+                font_size:20
+                on_release:
+                    app.root.current = "second"
+                    root.manager.transition.direction = "left"
+        BoxLayout:
+            padding: [25,25,25,25]
+            Button:
+                text: "GERİ"
+                on_release:
+                    app.root.current = "five"
+                    root.manager.transition.direction = "right"
+            Button:
+                text:"ÇIKIŞ"
+                on_release:
+                    app.root.current = "main"
+                    root.manager.transition.direction = "left"
+
+<SWindow>:
+    name: "seven"
+    BoxLayout:
+        orientation: "vertical"
+        padding: [50,50,50,50]
+
+        BoxLayout
+            padding: [45,45,45,45]
+            Label:
+                text:'Adı:'
+                color:"black"
+                font_size:27
+
+            TextInput:
+                multiline: False
+        BoxLayout:
+            padding: [45,45,45,45]
+            Label:
+                text:"Kullanıcı Adı:"
+                color:"black"
+                font_size:27
+            TextInput:
+
+        BoxLayout:
+            padding: [45,45,45,45]
+            Label:
+                text:"Parola:"
+                color:"black"
+                font_size:27
+            TextInput:
+                password: True
+
+        BoxLayout:
+            padding: [200,40,200,40]
+            Button:
+                text: "ANASAYFA"
+
+                on_release:
+                    app.root.current = "main"
+                    root.manager.transition.direction = "right"
+            Button:
+                text:"GİRİŞ"
+                on_release:
+                    app.root.current = "four"
+                    root.manager.transition.direction = "left"
+
+<NWindow>:
+    name: "nine"
+
+    BoxLayout:
+        orientation: "vertical"
+        padding: [50,50,50,50]
+
+        BoxLayout
+            padding: [45,45,45,45]
+            Label:
+                text:'Ders Adı:'
+                color:"black"
+                font_size:27
+
+            TextInput:
+                multiline: False
+        BoxLayout:
+            padding: [45,45,45,45]
+            Label:
+                text:"Ünite Adı:"
+                color:"black"
+                font_size:27
+            TextInput:
+
+        BoxLayout:
+            padding: [45,45,45,45]
+            Label:
+                text:"Soru Sayısı:"
+                color:"black"
+                font_size:27
+            TextInput:
+
+        BoxLayout:
+            padding: [200,40,200,40]
+            Button:
+                text: "ANASAYFA"
+
+                on_release:
+                    app.root.current = "main"
+                    root.manager.transition.direction = "right"
+            Button:
+                text:"KAYDET"
+                on_release:
+                    app.root.current = "four"
+                    root.manager.transition.direction = "left"
